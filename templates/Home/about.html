@@ -1,0 +1,86 @@
+{% extends 'base.html' %} <! this is comment extend the html file of base.html-->
+    {% block title %} Home {% endblock title %}
+    {% block aboutactive%} active{% endblock aboutactive%}
+    {% block body%} {% load static %}
+
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>aboutus</title>
+       {% load static %}
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+       <link rel="stylesheet" href="{%static 'style.css' %}">
+   </head>
+   <body>
+     <section>
+       <div class="conatiner">
+         <h1 class="heading">Meet the Team</h1>
+         <div class="car-wrapper">
+           <div class="card">
+             <img src="{% static 'card2.png.png'%}" alt="card-background" class="card-img">
+             <img src="{% static 'clogo.png.png'%}" alt="profile image" class="profile-img">
+             <h1>Varun Gupta</h1>
+             <p class="job-title">Web developer</p>
+             <p class="about">
+               I am web developer and ceates a innovative landing pages 
+             </p>
+             <a href="#" class="btn">contact</a>
+             <ul class="social-media">
+               <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+               <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+               <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+               <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+
+             </ul>
+           </div>
+
+           <!--second card-->
+           <div class="card">
+            <img src="{% static 'card2.png.png'%}" alt="card-background" class="card-img">
+            <img src="{% static 'profile2.png.jpg'%}" alt="profile image" class="profile-img">
+            <h1>Kabir Gupta</h1>
+            <p class="job-title">Graphic Designer</p>
+            <p class="about">
+                he is a graphic designer.......create creative logo
+            </p>
+            <a href="#" class="btn">contact</a>
+            <ul class="social-media">
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+
+            </ul>
+          </div>
+          <!--third card-->
+          <div class="card">
+            <img src="{% static 'card2.png.png'%}" alt="card-background" class="card-img">
+            <img src="{% static 'profile3.png.jpg'%}" alt="profile image" class="profile-img">
+            <h1>Jatin Kumar Singh</h1>
+            <p class="job-title">Content Writer</p>
+            <p class="about">
+              he is a blogger.....create the quality content 
+            </p>
+            <a href="#" class="btn">contact</a>
+            <ul class="social-media">
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+
+            </ul>
+          </div>
+         </div>
+       </div>
+     </section>
+
+       
+   </body>
+   </html>
+
+
+
+    {% endblock body%}

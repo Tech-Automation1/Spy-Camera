@@ -1,0 +1,44 @@
+{% extends 'base.html' %} <!this is comment extend the html file of base.html-->
+  {% block title %} blog {% endblock title %}
+  {% block blogactive%}active {% endblock blogactive%}
+
+  {% block body%}
+  <div class='container my-3'>
+    <h2> Blog by Tech Automation!</h2>
+    {% for post in allposts%}
+    <div class="row no-gutters border rounded overflow-hidden flex-md-row my-4 shadow-sm h-md-250 position-relative">
+      <div class="col p-4 d-flex flex-column position-static">
+        <strong class="d-inline-block mb-2 text-primary">Article by {{post.author}}</strong>
+        <h3 class="mb-0">{{post.title}}</h3>
+        <div class="mb-1 text-muted">{{post.datetime}}</div>
+        <p class="card-text mb-auto">{{post.content}} truncatechars:500</p>
+        <a href="/blog/{{post.slug}}" roll='button' class='btn btn-primary'>Continue reading</a>
+      </div>
+      <div class="col-auto d-none d-lg-block">
+
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+  </div>
+
+  <div class='container my-3'>
+    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+      <div class="col p-4 d-flex flex-column position-static">
+        <strong class="d-inline-block mb-2 text-primary">tech automation</strong>
+        <h3 class="mb-0">New trading technology blog Post</h3>
+        <div class="mb-1 text-muted">mar 1</div>
+        <p class="card-text mb-auto">The blogs provide by the team tech automation .</p>
+        <div class='my-2'>
+          <a href="/blog/blogpost" role='button' class="btn btn-primary">Continue reading</a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  {% endblock body%}
